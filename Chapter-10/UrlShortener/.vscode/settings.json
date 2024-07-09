@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin/Release/net8.0/publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/24de4f36-070f-41c8-b261-42a555a8b645/resourceGroups/urlshortener-tanure_group/providers/Microsoft.Web/sites/urlshortener-tanure"
+}
