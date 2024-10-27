@@ -1,0 +1,20 @@
+<h1>Load Technologies</h1>
+<button class="btn btn-primary" @onclick="LoadTechnologies">Load</button>
+@if (technologies != null)
+{
+    <ul>
+        @foreach (var tech in technologies)
+        {
+            <li>@tech</li>
+        }
+    </ul>
+}
+@code {
+    private int currentCount = 0;
+    private string[]? technologies;
+    private void LoadTechnologies()
+    {
+        technologies = new[] { "Razor Pages", "MVC",
+"Blazor"};
+    }
+}

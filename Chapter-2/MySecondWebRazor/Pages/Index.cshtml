@@ -1,0 +1,45 @@
+﻿@page
+@using MySecondWebRazor.Pages.Shared
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    string subtitle = "It's funny";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> 
+    <h2>@Model.Message</h2><br />
+    <h3>@subtitle</h3>
+    <a asp-page-handler="DefineColor" asp-route-id="1">Red</a>
+    <a asp-page-handler="DefineColor" asp-route-d="2">Green</a>
+    <div style="width: 200px;height:200px;background-color:@Model.Color"></div>
+    <form method="post">
+        <label>Total:</label><input type="text" 
+        name="quantity"/>
+        <input type="submit" value="Load Products" 
+        name="btn" />
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price.ToString("C")</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <hr/>
+    <!-- Integrate with Razor Components -->
+    <Component type="typeof(Technology)" render-mode="ServerPrerendered" />
+</div>

@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">SignalR Task Manager</h1>
+
+</div>
+
+<div class="task-form-container card">
+    <div class="card-body">
+    
+    <h2 class="card-title">Add a New Task</h2>
+
+    <form method="post" class="task-form">
+        <input type="text" id="taskName" placeholder="Enter task name" class="task-input" />
+
+        <input type="button" value="Add Task" id="addTaskButton" class="btn btn-primary task-submit" />
+
+    </form>
+    </div>
+</div>
+
+<div class="tasks-container">
+
+    <h2>Uncompleted Tasks</h2>
+
+    <ul class="list-group" id="uncompletedTaskList">
+    </ul>
+
+    <h2>Completed Tasks</h2>
+
+    <ul class="list-group" id="completedTaskList">
+
+    </ul>
+
+</div>
+
+@section Scripts {
+
+    <script src="~/js/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+    <script src="~/js/index/index-page.js" asp-append-version="true"></script>
+
+}
