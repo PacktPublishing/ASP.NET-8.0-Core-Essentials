@@ -1,0 +1,20 @@
+@model MyFirstMVCApp.Models.PersonModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Person View</h1>    
+</div>
+
+<div>
+    <form method="post" asp-asp-controller="Person" asp-action="Register">
+        @Html.LabelFor(p => p.Name)
+        @Html.TextBoxFor(p => p.Name)
+        <br />
+        @Html.LabelFor(p => p.DateOfBirth)
+        @Html.TextBoxFor(p => p.DateOfBirth)
+
+        <input type="submit" value="Register" />
+    </form>
+</div>
