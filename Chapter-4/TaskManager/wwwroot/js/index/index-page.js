@@ -34,8 +34,8 @@ function updateTaskList(taskModel) {
             var divAlign = document.createElement("div");
             divAlign.className = "ms-2 me-auto";
             divAlign.textContent = taskModel.name;
-
             taskItem.appendChild(divAlign);
+            
             var label = document.createElement("span");
             label.className = "badge text-bg-primary rounded-pill";
             label.textContent = "Completed";
