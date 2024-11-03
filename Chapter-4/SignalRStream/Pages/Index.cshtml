@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Strean</h1>
+    <ul id="ulLog"></ul>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+
+    <script src="~/js/index-stream.js" asp-append-version="true"></script>
+}
