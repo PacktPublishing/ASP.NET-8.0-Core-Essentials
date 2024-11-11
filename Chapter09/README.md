@@ -1,9 +1,9 @@
 # ASP.NET Core Essentials - Chapter 9
 
 
-## Azure App Configuration - Cost Extimation
+## Azure App Configuration - Cost Estimation
 
-You can check the following cost estimation for the Azure App Configuration service in Azure in a table below:
+You can check the following cost estimation for the Azure App Configuration service:
 
 
 | Service   category | Service type      | Region    | Description                                                                                                              | Estimated monthly cost | Estimated upfront cost |
