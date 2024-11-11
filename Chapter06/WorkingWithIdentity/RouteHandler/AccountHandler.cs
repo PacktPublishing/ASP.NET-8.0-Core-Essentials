@@ -9,6 +9,7 @@ public static class AccountHandler
 {
     public static void RegisterAccountRoutes(this WebApplication app)
     {
+        // API Services to manage accounts
         app.MapGet("/account", async (CancellationToken cancellationToken, BankingDbContext dbContext) => 
 
         { 
